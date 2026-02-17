@@ -1,16 +1,44 @@
-# React + Vite
+# IoT Pro Dashboard - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time, responsive React.js web application designed to visualize telemetry data and manage alerts from multiple IoT sensors.
 
-Currently, two official plugins are available:
+## 🌟 Key Features
+- **Real-time Dashboard View**: Displays the latest sensor readings (Temperature, Humidity, etc.) with dynamic status cards. 
+- **Dynamic Threshold Highlighting**: Cards automatically turn **Red** when a sensor reading breaches its predefined safety limit (e.g., Humidity > 80%).
+- **Live Telemetry Charts**: Interactive line charts powered by `Recharts` to visualize data trends over time.
+- **Alert Management Page**: A dedicated view to list all historical violations, showing timestamps, topics, and specific violated parameters.
+- **Acknowledge System**: Built-in functionality to acknowledge and clear active alerts.
+- **Raw Data Logs**: A detailed tabular view of all incoming sensor packets with:
+  - **Topic-wise Filtering**: Quickly isolate data from specific devices (e.g., Bedroom vs Garage).
+  - **Pagination**: Efficiently navigate through large datasets.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Framework**: React.js (Vite)
+- **Styling**: Tailwind CSS for responsive design.
+- **Visualization**: Recharts for live telemetry graphs.
+- **Icons**: Lucide-React for intuitive navigation.
+- **Notifications**: React-Toastify for real-time popup alert messages.
 
-## React Compiler
+## 📂 Project Structure
+- `src/App.jsx`: Main application logic containing the dashboard, alerts, and raw data views.
+- `package.json`: Project dependencies and scripts.
+- `postcss.config.js` & `tailwind.config.js`: Configuration for styling and utility classes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js installed on your machine.
+- Backend API running at `http://localhost:8000`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+1. Clone this repository:
+   ```bash
+   git clone <your-frontend-repo-url>
+   cd iot-monitoring-frontend
+2.Install dependencies:
+Bash
+npm install
+
+3.Start the development server:
+Bash
+npm run dev
